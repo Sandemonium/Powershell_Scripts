@@ -1,4 +1,4 @@
-<# Script to search the registry for all software install keys.  Based on the script provided by Crowdstrike and modified to sort the output, add comments to assist with reading/modifying the script, the QuietUninstallString (where provided), UninstallString, and RegPath of the key to assist with removal of apps and cleanup of orphaned keys.
+<# Script to search the registry for all software install keys.  Based on the script from https://github.com/bk-cs/rtr and modified to sort the output, add comments to assist with reading/modifying the script, the QuietUninstallString (where provided), UninstallString, and RegPath of the key to assist with removal of apps and cleanup of orphaned keys.
 #> 
 
 function grk ([string]$Str) {
