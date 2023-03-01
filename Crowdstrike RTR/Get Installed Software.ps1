@@ -31,5 +31,5 @@ $Out = @('Microsoft\Windows\CurrentVersion\Uninstall',
 'Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall').foreach{
     grk "Software\$_" | Where-Object { $_.DisplayName -and $_.DisplayVersion -and $_.Publisher } | Select-Object DisplayName,DisplayVersion,Publisher,InstallLocation,QuietUninstallString,UninstallString,RegPath
 }
-#Display the output and sort by the displayname.
+#Display the output and sort by the displayname.  Optionally, append '| ft -auto' to this line to format as a table in PS.
 $Out | sort displayname
